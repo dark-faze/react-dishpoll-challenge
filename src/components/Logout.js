@@ -1,22 +1,23 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { logout, selectUser } from "../redux/userSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../redux/userSlice";
 import "../styles/Logout.css";
 
 const Logout = () => {
   const dispatch = useDispatch();
-  const userName = useSelector(selectUser);
+  const navigate = useNavigate();
 
-  const logout = (e) => {
+  const signout = (e) => {
+    console.log("efm");
     dispatch(logout());
+    navigate("/");
   };
 
   return (
-    <form className="logout">
-      <button className="logout__button" onClick={(e) => logout(e)}>
-        Log out
-      </button>
-    </form>
+    <div className="logout">
+      <button onClick={(e) => signout(e)}>Log out</button>
+    </div>
   );
 };
 

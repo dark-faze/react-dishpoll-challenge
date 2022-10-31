@@ -1,0 +1,12 @@
+.main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    background: rgb(30, 30, 30);
+    color: white;
+}
+.navlinks > a{
+    margin: 10px;
+    color: white;
+}

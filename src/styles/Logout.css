@@ -1,15 +1,12 @@
-.logout {
-
-  }
+.logout > button {
+  min-width: 10px;
+  background: black;
+  padding : 15px;
+  margin:10px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-family: "Inter";
+  border-radius: 3px;
+}
   
-  .logout__button {
-    min-width: 300px;
-    padding: 17px 30px;
-    margin-top: 20px;
-    background: black;
-    border: none;
-    color: white;
-    font-size: 14px;
-    font-family: "Inter";
-    border-radius: 3px;
-  }
