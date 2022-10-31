@@ -1,0 +1,17 @@
+.wrapper_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dish_bar{
+    display: flex;
+    width:50vh;
+    height:5vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(107, 0, 206);
+    color: aliceblue;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 20px
+}

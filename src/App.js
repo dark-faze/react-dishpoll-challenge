@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       {userName ? (
-        <div>
+        <div className="app_div_wrapper">
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} exact/>
