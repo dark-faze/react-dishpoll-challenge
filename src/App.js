@@ -32,7 +32,7 @@ const App = () => {
         })
     })
 
-    localStorage.setItem('userChoices' , JSON.stringify(usersChoices))
+    if(!localStorage.getItem("userChoices")) localStorage.setItem('userChoices' , JSON.stringify(usersChoices))
     console.log(usersChoices);
   }
   useEffect(() => {
