@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import DishList from "./components/DishList";
@@ -7,13 +7,25 @@ import LeaderBoards from "./components/LeaderBoards";
 import { Route, Routes } from "react-router-dom";
 
 import { selectUser } from "./redux/userSlice";
-import { useSelector } from "react-redux";
+import { populateUsers } from "./redux/userDataSlice";
+import { useSelector , useDispatch } from "react-redux";
 
 import "./App.css";
 
 const App = () => {
   const userName = useSelector(selectUser);
-  console.log(userName);
+  console.log(userName)
+  const dispatch = useDispatch()
+  
+  const populateUsersData = async () => {
+    const response = await fetch("https://raw.githubusercontent.com/syook/react-dishpoll/main/users.json") 
+    const responseJson = await response.json();
+    dispatch(populateUsers(responseJson));
+    console.log(responseJson);
+  }
+  useEffect(() => {
+    populateUsersData();
+  },[])
 
   return (
     <>
