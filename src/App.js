@@ -21,7 +21,19 @@ const App = () => {
     const response = await fetch("https://raw.githubusercontent.com/syook/react-dishpoll/main/users.json") 
     const responseJson = await response.json();
     dispatch(populateUsers(responseJson));
-    console.log(responseJson);
+
+    let usersChoices = [];
+    responseJson.map((user) => {
+        usersChoices.push({
+          username : user.username,
+          firstChoice : "",
+          secondChoice : "",
+          thirdChoice : ""
+        })
+    })
+
+    localStorage.setItem('userChoices' , JSON.stringify(usersChoices))
+    console.log(usersChoices);
   }
   useEffect(() => {
     populateUsersData();
