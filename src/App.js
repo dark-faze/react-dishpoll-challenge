@@ -3,7 +3,7 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import DishList from "./components/DishList";
 import HomePage from "./components/HomePage";
-import LeaderBoards from "./components/LeaderBoards";
+import LeaderBoard from "./components/LeaderBoard";
 import { Route, Routes } from "react-router-dom";
 
 import { selectUser } from "./redux/userSlice";
@@ -45,9 +45,9 @@ const App = () => {
         <div className="app_div_wrapper">
           <Navbar />
           <Routes>
-            <Route path="/" element={<HomePage />} exact/>
-            <Route path="/dishlist" element={<DishList />} exact/>
-            <Route path="/leaderboards" element={<LeaderBoards />} />
+            <Route path="leaderboard" element={<LeaderBoard />} />
+            <Route path="dishlist" element={<DishList />} />
+            <Route exact path="/" element={<HomePage />}/>
           </Routes>
         </div>
       ) : (

@@ -1,0 +1,24 @@
+.main_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_wrapper > span {
+    font-size: 5vh;
+    margin: 10px;
+}
+
+.score_card{
+    display: flex;
+    width:90vh;
+    height:5vh;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(206, 0, 41);
+    color: aliceblue;
+    border-radius: 8px;
+    font-size: 20px
+}
