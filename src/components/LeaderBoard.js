@@ -6,7 +6,7 @@ const LeaderBoard = () => {
   console.log(scores);
   return (
     <div className="main_wrapper">
-      <span>LeaderBoard</span>
+      <span>✨ LeaderBoard ✨</span>
       {scores.map((dish) => {
         return (
           <div className="score_card">{`${dish.dishName}  Score:${dish.score}`}</div>
